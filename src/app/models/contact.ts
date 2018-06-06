@@ -8,5 +8,7 @@ export interface Contact {
     email?: string;
     company?: string;
     contactType?: number;
+
+    isFav?: boolean;
 }
 

@@ -1,3 +1,10 @@
-<p>
-  contact-list works!
-</p>
+<div class="columns is-multiline">
+  <app-contact-card 
+    class="column is-4" 
+    *ngFor="let c of contacts" 
+    [contact]="c" 
+    (isFav)="onFav(c)"
+    (delete)="onContactDelete(c)">
+    
+  </app-contact-card>
+</div>

@@ -1,3 +1,77 @@
-<p>
-  contact-edit works!
-</p>
+
+<section class="section">
+  <form #userForm novalidate [formGroup]="editForm">
+    <div class="field">
+      <label class="label">First name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" formControlName="firstName">
+      </div>
+      <p *ngIf="editForm.get('firstName').touched && editForm.get('firstName').invalid" class="help is-danger">Firstname is required</p>
+    </div>
+    <div class="field">
+      <label class="label">Last name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" formControlName="lastName">
+      </div>
+      <p *ngIf="editForm.get('lastName').touched && editForm.get('lastName').invalid" class="help is-danger">Lastname is required</p>
+    </div>
+    <div class="field">
+      <label class="label">Company</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" formControlName="company">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Phone</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" formControlName="phone">
+      </div>
+    </div>
+
+
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="email" placeholder="Email input" formControlName="email">
+
+      </div>
+      <p *ngIf="editForm.get('email').touched && editForm.get('email').invalid" class="help is-danger">This email is invalid</p>
+    </div>
+    <div class="field">
+      <label class="checkbox">
+        <input type="checkbox" formControlName="isFav"> Is Fav
+      </label>
+    </div>
+    <div class="field">
+      <label class="label">Contact Type</label>
+      <div class="control">
+        <div class="select">
+          <select formControlName="contactType">
+            <option *ngFor="let t of contactTypes$ | async" [value]="t.id">{{ t.name }}</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Remark</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Textarea" formControlName="remark" maxlength="500"></textarea>
+      </div>
+      {{ charCount }} of {{ totalCharsAllowed }}
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success" (click)="save()" [disabled]="editForm.invalid">Save</button>
+      </div>
+      <div class="control">
+        <button class="button is-warning" (click)="resetForm()">Cancel</button>
+      </div>
+    </div>
+  </form>
+
+
+</section>

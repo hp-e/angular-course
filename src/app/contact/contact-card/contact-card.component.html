@@ -1,0 +1,44 @@
+<article class="media is-green">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="https://bulma.io/images/placeholders/128x128.png">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <a class="title" [routerLink]="[contact.id]"> <strong>{{contact.firstName}} {{contact.lastName }}</strong></a>
+        <br />Email: <small>{{ contact.email }}</small>
+        <br />Phone: <small>{{ contact.phone }}</small>
+      </p>
+      <p>
+        {{ contact.remark }}
+      </p>
+
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fa fa-reply"></i>
+          </span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fa fa-retweet"></i>
+          </span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small" (click)="toggleFav()">
+
+            <i *ngIf="contact.isFav" class="fa fa-heart" ></i>
+            <i *ngIf="!contact.isFav" class="fa fa-heart-o"></i>
+          </span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+    <button class="delete" (click)="onDeleteClick()"></button>
+  </div>
+</article>
