@@ -35,8 +35,9 @@ export class ExploreDataComponent implements OnInit {
 
   addContact() {
     const contact: Contact = {
-      id: 100,
-      name: 'Test Testesen'
+      id: 1000,
+      firstName: 'Test',
+      lastName: 'Testesen',
     };
 
     this.contactService.addContact(contact).subscribe(
@@ -46,8 +47,9 @@ export class ExploreDataComponent implements OnInit {
 
   updateContact() {
     const contact: Contact = {
-      id: 100,
-      name: 'Test T. Estesen'
+      id: 1000,
+      firstName: 'Test T.',
+      lastName: 'Estesen'
     };
 
     this.contactService.updateContact(contact).subscribe(
