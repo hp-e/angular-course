@@ -1,0 +1,45 @@
+
+
+<div class="section">
+  <div class="buttons is-grouped has-addons">
+
+    <button class="button" (click)="getContactTypes()">Get Contact types</button>
+  
+
+    <button class="button" (click)="getContacts()">Get Contacts</button>
+
+  
+    <button class="button is-danger" (click)="reset()">Reset</button>
+    
+    <button class="button is-primary" (click)="addContact()">Add Contact</button>
+    <button class="button is-warning" (click)="updateContact()">Update Contact</button>
+  </div>
+  
+</div>
+
+
+
+<div class="section">
+  <div class="columns">
+    <div class="column">
+        <h2 class="title">Contact types</h2>
+
+        <ul>
+          <li *ngFor="let type of contactTypes">
+            {{ type.name }}
+          </li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2 class="title">Contacts</h2>
+
+        <ul>
+          <li *ngFor="let contact of contacts">
+            {{ contact.name }}
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+</div>
