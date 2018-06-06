@@ -4,7 +4,7 @@ import { ContactIndexComponent } from './contact-index/contact-index.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 
 const routes: Routes = [
-  {path: '', component: ContactIndexComponent}
+  {path: '', component: ContactIndexComponent},
   {path: ':contactId', component: ContactEditComponent}
 ];
 
