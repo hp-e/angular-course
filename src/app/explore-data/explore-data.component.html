@@ -9,7 +9,7 @@
     <button class="button" (click)="getContacts()">Get Contacts</button>
 
   
-    <button class="button is-danger" (click)="reset()">Reset</button>
+    <button class="button is-danger" (click)="reset()">Clear list</button>
     
     <button class="button is-primary" (click)="addContact()">Add Contact</button>
     <button class="button is-warning" (click)="updateContact()">Update Contact</button>
@@ -36,7 +36,7 @@
 
         <ul>
           <li *ngFor="let contact of contacts">
-            {{ contact.name }}
+            {{ contact.firstName }} {{ contact.lastName }}
           </li>
         </ul>
     </div>
