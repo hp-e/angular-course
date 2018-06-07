@@ -1,0 +1,8 @@
+"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live", "Martin Golding"
+"There’s no test like production", "Unknown"
+"I love deadlines. I like the whooshing sound they make as they fly by", "Douglas Adams"
+"Without requirements or design, programming is the art of adding bugs to an empty text file", "Louis Srygley"
+"Walking on water and developing software from a specification are easy of both are frozen", "Edward V Berard"
+"Linux is only free if your time has no value", "Jamie Zawinski"
+"The best thing about a boolean is even if you are wrong, you are only off by a bit.", "Unknown"
+"The greatest performance improvement of all is when a system goes from not-working to working.", "John Ousterhout"
