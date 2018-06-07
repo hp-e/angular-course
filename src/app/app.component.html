@@ -1,8 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-<app-quote quote="Hvorfor sitte inne når alt håp er ute" author="hpe">
 
-</app-quote>
+  <div class="columns is-multiline">
+      <app-quote *ngFor="let q of quotes" [quote]="q.quote" author="{{q.author}}" ></app-quote>
+  </div>
+
   </div>
   
   <router-outlet></router-outlet>

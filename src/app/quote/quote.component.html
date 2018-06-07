@@ -1,3 +1,5 @@
 
-  <blockquote>{{ quote }}</blockquote>
-  {{ author}}
+  <blockquote>{{ quote }}</blockquote>  
+      <i *ngIf="author != 'Unknown'">{{ author}}</i>
+      <b *ngIf="author == 'Unknown'">{{ author}}</b>
+
