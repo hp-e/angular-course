@@ -8,13 +8,15 @@ import { InMemoryDataService } from './in-memory.data';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExploreDataComponent } from './explore-data/explore-data.component';
+import { FormInfoComponent } from './form-info/form-info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    ExploreDataComponent
+    ExploreDataComponent,
+    FormInfoComponent
   ],
   imports: [
     BrowserModule,
