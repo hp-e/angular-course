@@ -1,4 +1,5 @@
 angular.io/docs: veldig viktig nettside for å finne dokumentasjon
+
 rangle.io: https://angular-2-training-book.rangle.io/ 
 
 

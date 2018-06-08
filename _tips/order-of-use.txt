@@ -1,0 +1,9 @@
+
+Components
+Directives ngFor, ngIf
+Routing
+Modules
+Services
+
+Pipe
+Typsescript
